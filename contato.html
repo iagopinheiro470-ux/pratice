@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <title>diop store-24 horas por você</title>
+ <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
+</head>
+
+<body>
+  <header>
+     <h1>Bem vindo a diop store!</h1>
+        <nav>
+          <ul>
+            <li><a href="produtos.html">nossos produtos</a></li>
+            <li><a href="contato.html">faça seu pedido</a></li>
+            <li><a href="home.html">sobre nós</a></li>
+          </ul>
+        </nav> 
+   <h1>Bem vindo a seção de pedidos</h1>
+  </header>
+  <main>
+    <section>
+      <h2>Contato</h2>
+        <p>Viu como nossos produtos são de qualidade? então faça seu pedido!
+        é simples e fácil, preencha o formulário abaixo:
+        </p>
+    </section>
+    <form action="#" method="post">
+       <label for="nome">Nome completo:</label>
+       <input type="text" required id= "nome" name="nome" minlength="5" placeholder="ex: Gabriel Pereira Sampaio">
+
+       <label for="email">email:</label>
+       <input type="email" required name="email" id="email" placeholder="gabrielpereira@gmail.com">
+
+       <label for="telefone">telefone:</label>
+       <input type="telefone" required name="telefone" id="telefone" placeholder="(99)99999-9999">
+
+       <label for="produto">Selecione o produto de seu interesse:</label>
+       <select id="produto" name="produto" required>
+         <option value="vassoura">vassoura</option>
+         <option value="aspirador de pó">aspirador de pó</option>
+         <option value="lixeira">lixeira</option>
+       </select>
+       <button type="submit">enviar</button>
+    </form>
+  </main>
+</body>
