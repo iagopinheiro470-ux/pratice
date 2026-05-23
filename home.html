@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>diop store-24 horas por você</title>
-  <meta name="viewport" content="width=devicewidth, initial-scale=1.0">
-  <link rel="stylesheet"href="style.css">
+ <meta charset="UTF-8">
+ <title>diop store-24 horas por você</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
       <h1>Bem vindo a diop store!</h1>
@@ -15,17 +16,45 @@
               <li><a href="contato.html">faça seu pedido</a></li>
               <li><a href="home.html">sobre nós</a></li>
           </ul>
-        </nav> 
+        </nav>
+        <div class="carrinho-topo" style="text-align: right; padding: 10px; font-weight: bold;">
+          🛒 Carrinho: <span id="contador-carrinho">0</span> itens
+        </div>
     </header>
-
-  <main>
-   <h2>Bem vindo a diop! aqui temos os melhores produtos pra você</h2>
+ <main>
     <section>
-      <p>aqui voce encontra os melhores produtos para cuidar da sua casa!</p>
-      <p> com a gente, você terá uma experiencia agradável e rápida!</p>
+        <h2>Destaques</h2>
+        <p>Confira os produtos que tiveram a melhor avaliação por quem já comprou com a gente:</p>
     </section>
-  </main>
- <footer>
-    <p>2026 diop store diop@diopstore.com</p>
- </footer>
+  <table border="1">
+    <thead>
+        <tr>
+            <th>produtos</th>
+            <th>preço</th>
+            <th>quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>vassoura</td>
+            <td>R$20</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>lixeira</td>
+            <td>R$10</td>
+            <td>27</td>
+        </tr>
+        <tr>
+            <td>aspirador de pó</td>
+            <td>R$35</td>
+            <td>35</td>
+            <td></td>
+        </tr>
+    </tbody>
+  </table>
+ </main>
+
+ <script src="js/app.js" type="module"></script>
 </body>
+</html>
