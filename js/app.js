@@ -141,7 +141,7 @@ function exibirFeedbackPopup(mensagem, tipo) {
 
     const popup = document.createElement('div');
     popup.className = 'popup-diop';
-    popup.textContent = mensagem; // CORREÇÃO: Removido o 'message' inexistente que causava erro de sintaxe
+    popup.textContent = mensagem;
 
     Object.assign(popup.style, {
         position: 'fixed',
