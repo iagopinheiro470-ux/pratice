@@ -116,7 +116,7 @@ function configurarEventosFormulario() {
         document.getElementById('erro-nome').textContent = "";
         document.getElementById('erro-telefone').textContent = "";
 
-        if (nome.value.trim().split(" ").length < 2) {
+        if (nome.value.trim().split(/\s+/).length < 2) {
             document.getElementById('erro-nome').textContent = "Por favor, digite seu nome e sobrenome.";
             formValido = false;
         }
@@ -130,12 +130,7 @@ function configurarEventosFormulario() {
         if (!formValido) {
             evento.preventDefault();
         } else {
-            evento.preventDefault();
-            exibirFeedbackPopup("Pedido enviado com sucesso!", "sucesso");
-            form.reset();
-            carrinho = [];
             localStorage.removeItem('carrinho_diop');
-            atualizarContadorVisual();
         }
     });
 }
@@ -146,7 +141,7 @@ function exibirFeedbackPopup(mensagem, tipo) {
 
     const popup = document.createElement('div');
     popup.className = 'popup-diop';
-    popup.textContent = message || mensagem;
+    popup.textContent = mensagem; // CORREÇÃO: Removido o 'message' inexistente que causava erro de sintaxe
 
     Object.assign(popup.style, {
         position: 'fixed',
