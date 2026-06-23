@@ -2,19 +2,19 @@
 <html lang="pt-BR">
 <head>
  <meta charset="UTF-8">
- <title>diop store-24 horas por você</title>
+ <title>diop store - Faça seu Pedido</title>
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="../style.css">
 </head>
-
 <body>
   <header>
      <h1>Bem vindo a diop store!</h1>
         <nav>
           <ul>
-            <li><a href="produtos.html">nossos produtos</a></li>
-            <li><a href="contato.html">faça seu pedido</a></li>
-            <li><a href="home.html">sobre nós</a></li>
+            <li><a href="../produtos.html">nossos produtos</a></li>
+            <li><a href="contato.php">faça seu pedido</a></li>
+            <li><a href="../home.html">sobre nós</a></li>
+            <li><a href="listar.php" style="color: #3498db; font-weight: bold;">Painel de Pedidos</a></li>
           </ul>
         </nav>
    <h1>Bem vindo a seção de pedidos</h1>
@@ -22,11 +22,15 @@
   <main>
     <section>
       <h2>Contato</h2>
-        <p>Viu como nossos produtos são de qualidade? então faça seu pedido!
-        é simples e fácil, preencha o formulário abaixo:
-        </p>
+        <p>Viu como nossos produtos são de qualidade? então faça seu pedido! é simples e fácil, preencha o formulário abaixo:</p>
+        
+        <?php if(isset($_GET['erro'])): ?> 
+            <p style="color: red; font-weight: bold; margin-bottom: 15px;">⚠️ <?= htmlspecialchars($_GET['erro']) ?></p> 
+        <?php endif; ?>
     </section>
-    <form id="form-pedido" action="#" method="post">
+    
+    <!-- Action apontando para a pasta actions externa -->
+    <form id="form-pedido" action="../actions/criar.php" method="post">
        <label for="nome">Nome completo:</label>
        <input type="text" required id="nome" name="nome" minlength="5" placeholder="ex: Gabriel Pereira Sampaio">
        <span id="erro-nome" style="color: red; display: block; font-size: 14px; margin-bottom: 10px;"></span>
@@ -45,10 +49,13 @@
          <option value="aspirador de pó">aspirador de pó</option>
          <option value="lixeira">lixeira</option>
        </select>
+       <br><br>
        <button type="submit">enviar</button>
     </form>
   </main>
 
-  <script src="js/app.js" type="module"></script>
+  <script src="../js/app.js" type="module"></script>
 </body>
 </html>
+
+
